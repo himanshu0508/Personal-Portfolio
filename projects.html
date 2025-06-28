@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+   header {
+      background-color: #ffffff;
+      padding: 20px 60px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background-color: orange;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .logo strong {
+      font-size: 18px;
+    }
+
+    .role {
+      font-size: 14px;
+      color: #555;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      border-right: 1px solid #ccc;
+      padding-right: 20px;
+    }
+
+    nav ul li:last-child {
+      border-right: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav a:hover {
+      color: orange;
+    }
+
+    .resume {
+      padding: 60px 80px;
+    }
+
+    .resume h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      column-gap: 80px;
+      margin-bottom: 40px;
+    }
+
+    .left-heading {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .edu-entry {
+      margin-bottom: 40px;
+    }
+
+    .date {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .edu-entry strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #000;
+    }
+
+    .edu-entry p {
+      margin: 2px 0;
+      color: #444;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
+
+    .right-content ul {
+      padding-left: 20px;
+    }
+
+    .right-content li {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .footer {
+      background-color: #f5f5f5;
+      padding: 40px 60px;
+      border-top: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-item {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .footer-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .footer-item p,
+    .footer-item a {
+      color: #444;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-item a:hover {
+      color: #f2b705;
+      text-decoration: underline;
+    }
+
+    .social-icons a img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+    }
+
+    .footer-right {
+      text-align: right;
+      flex: 1;
+      min-width: 200px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .footer-right {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo ul {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <span class="dot"></span>
+                <strong><a href="index.html">HIMANSHU PHOGAT</a></strong>
+                <span class="role">WEB DEVELOPER</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="projects" style="padding: 60px 80px;">
+  <h2 style="font-size: 36px; margin-bottom: 40px;">Projects</h2>
+
+  <div class="section-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+    
+    <!-- Project 1 -->
+    <div class="project-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio showcasing my web development projects and skills.</p>
+      <img src="project1.png" alt="Portfolio Website" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+      <a href="https://yourportfolio.link" target="_blank" style="display: inline-block; margin-top: 10px; color: orange; text-decoration: none;"></a>
+    </div>
+
+    <!-- Project 2 -->
+    <!-- <div class="project-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h3>Flipkart Clone</h3>
+      <p>A responsive e-commerce frontend inspired by Flipkart, built using HTML, CSS, and JS.</p>
+      <img src="project2.jpg" alt="Flipkart Clone" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+      <a href="project2.html" target="_blank" style="display: inline-block; margin-top: 10px; color: orange; text-decoration: none;">View Project</a>
+    </div>
+
+  </div> -->
+</section>
+
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-item">
+        <h3>Phone</h3>
+        <p>+91-8851055612</p>
+      </div>
+      <div class="footer-item">
+        <h3>Email</h3>
+        <p><a href="mailto:hphogat0508@gmail.com">hphogat0508@gmail.com</a></p>
+      </div>
+      <div class="footer-item">
+        <h3>Follow Me</h3>
+        <div class="social-icons">
+          <a href="#"><img src="twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="linked logo.png" alt="LinkedIn"></a>
+          <a href="#"><img src="github.png" alt="GitHub"></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>© 2025 by Himanshu Phogat.</p>
+      </div>
+    </div>
+  </footer>
+
+    
+
+</html>
